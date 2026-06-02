@@ -1,0 +1,14 @@
+services:
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+
+  storybook:
+    build:
+      context: ./client
+      dockerfile: Dockerfile.storybook
+    ports:
+      - "6006:80"
