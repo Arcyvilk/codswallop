@@ -2,5 +2,5 @@ node_modules
 .git
 build
 .output
-.storybook/storybook-static
+storybook-static
 .svelte-kit

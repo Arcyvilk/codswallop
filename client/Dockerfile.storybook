@@ -5,7 +5,7 @@ COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 RUN pnpm install --no-frozen-lockfile
 COPY . .
 ENV CI=true
-RUN pnpm build-storybook
+RUN pnpm build-sb
 
 FROM nginx:stable-alpine AS runner
 COPY --from=builder /client/storybook-static /usr/share/nginx/html
